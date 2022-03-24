@@ -66,7 +66,7 @@ goToGame.addEventListener("click", () => {
     player.innerHTML = `Player: desconocidx`;
   } else {
     player.innerText = `Player: ${username.value}`;
-    document.getElementById("finalMessage") = `¡Felicidades ${player}, has ganado este PokeMatch!`;
+    document.getElementById("finalMessage").innerText = '¡Felicidades ' + username.value + ', has ganado este PokeMatch!';
   }
   document.getElementById("moves").style.display = "grid";
 });
