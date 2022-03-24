@@ -7,7 +7,7 @@
 button {
     background-color: #9FF0FF;
     border: #000 solid 1px;
-    padding: 8px 30px;
+    padding: 6px 12px;
     font-size: 40px;
 }
 button:hover {
@@ -56,24 +56,7 @@ body {
     margin-left: 9px;
 }
 
-.background-image {
-    background-image: url(img/imagenFondo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 760px;
-}
 
-#user-log {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    height: 381px;
-    margin: 150px auto 50% auto;
-    align-items: center;
-    background-color: hsla(189, 100%, 81%, 0.44);
-}
 
 .squirtle {
     height: 160px;
@@ -122,12 +105,7 @@ body {
     margin-top: 190px;
 }
 
-#stacked-cards {
-    height: 157px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 58px;
-}
+
 
 #menu-buttons {
     grid-auto-flow: column;
@@ -198,28 +176,106 @@ body {
 #game {
     display: none;
 }
-
-.card{
-    width: 100px;
-    height: 100px;
-    margin: 15px;
-}
   
-.image-card{
-    height: 100px;
+
+
+/*para mobile*/
+@media (min-width: 320px) and (max-width: 480px){
+    .background-image {
+        background-image: url(img/imagenFondo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 95.5vh;
+        overflow: hidden;
+    }
+
+    .image-card-mobile{
+        height: 92px !important;
+    }
+
+    body {
+        overflow: hidden;
+    }
+    .image-card{
+        height: 100px;
+    }
+    
+    #user-log {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
+        height: 381px;
+        margin: 117px auto 50% auto;
+        align-items: center;
+        background-color: hsla(189, 100%, 81%, 0.44);
+    }
+    #stacked-cards {
+        height: 232px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 60px;
+        margin-top: 8px;
+    }
+    .card {
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+    }
+    #game-over {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        width: 320px;
+        height: 300px;
+        margin: 195px auto 50% auto;
+        align-items: center;
+        background-color: hsla(189, 100%, 81%, 0.44);
+    }
 }
 
-/* modelo responsive para tablet */
+/* modelo responsive para tablet ipas*/
+
 @media (min-width: 768px) and (max-width: 1024px){
+    body {
+        overflow: hidden;
+    }
+
+    .background-image {
+        background-image: url(img/imagenFondo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+    #user-log {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
+        height: 381px;
+        margin: 266px auto 50% auto;
+        align-items: center;
+        background-color: hsla(189, 100%, 81%, 0.44);
+    }
+    #stacked-cards {
+        height: 232px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 60px;
+        margin-top: 182px;
+    }
 
     #allCards {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .card{
-        width: 140px;
-        height: 140px;
-        margin: 30px;
+        width: 134px;
+        height: 138px;
+        margin: 31px;
     }
 
     .image-card{
@@ -228,41 +284,76 @@ body {
 
     .card-container {
         display: grid;
+    }
+    #game-over {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        width: 320px;
+        height: 300px;
+        margin: 343px auto 50% auto;
+        align-items: center;
+        background-color: hsla(189, 100%, 81%, 0.44);
     }
 }
 
 /* modelo responsive desktop */
 @media (min-width: 1024px){
+    .background-image {
+        background-image: url(img/imagenFondo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 91.5vh;
+    }
+    #user-log {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
+        height: 381px;
+        margin: 109px auto 50% auto;
+        align-items: center;
+        background-color: hsla(189, 100%, 81%, 0.44);
+    }
     
     #allCards {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
+    #stacked-cards {
+        height: 157px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 58px;
+    }
 
     .card{
-        width: 170px;
-        height: 170px;
-        margin: 30px;
+        width: 150px;
+        height: 113px;
+        margin: 34px;
     }
 
     .image-card{
-        height: 170px;
+        height: 155px;
     }
     
     .card-container {
         display: grid;
     }
+    #game-over {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        width: 320px;
+        height: 300px;
+        margin: 151px auto 50% auto;
+        align-items: center;
+        background-color: hsla(189, 100%, 81%, 0.44);
+    }
 }
 
-#game-over {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    width: 320px;
-    height: 300px;
-    margin: 150px auto 50% auto;
-    align-items: center;
-    background-color: hsla(189, 100%, 81%, 0.44);
-}
+
+
 
 #finalMessage {
     font-size: 30px;
